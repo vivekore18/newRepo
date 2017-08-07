@@ -1,0 +1,408 @@
+1)w.a.p to print numbers in java up to10 with out using loops? 
+Ans)    public class Practice {
+	public static void main(String[] args) {
+		printnumber(1);
+	}
+	public static void printnumber(int n){
+		
+		if(n<=10){
+			System.out.println(n);
+			printnumber(n+1);
+		}
+	}
+}
+===============================================================
+2)write a java program to implement bubble sort -
+public class Practice {
+		// 9,8,7,6,5
+	public static void main(String[] args) {
+		
+		int[] arr = {9,8,7,6,5};
+		
+		for (int i : arr) {
+			System.out.print(i);
+		}
+		System.out.println();
+		bubblesort(arr);
+		for (int i : arr) {
+			System.out.print(i);
+		}
+	}
+ 	private static void bubblesort(int[] arr) {
+		int temp = 0;
+		
+		for(int i=0;i<arr.length;i++)
+		{
+			for(int j=1;j<(arr.length)-i;j++){				if(arr[j-1]>arr[j]){
+	temp = arr[j-1];
+	arr[j-1]=arr[j];
+	arr[j]=temp;
+}}}}}
+=============================================================
+3)
+1 2 3 4 5 
+1 2 3 4 
+1 2 3 
+1 2 
+1 
+a)
+public class Practice {
+		
+	public static void main(String[] args) {
+		for(int i=5;i>0;i--){
+			for(int j=1;j<=i;j++)
+			{
+				System.out.print(j+" ");
+			}
+			System.out.println();
+}}}
+==============================================================
+4)
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5 
+
+public class Practice {
+		
+	public static void main(String[] args) {
+		for(int i=1;i<=5;i++){
+			for(int j=1;j<=i;j++)
+			{
+				System.out.print(j+" ");
+			}
+			System.out.println();
+		}
+}	}
+===============================================================
+5)
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+public class Practice {
+		
+	public static void main(String[] args) {
+		int num=1;
+	      for(int i=1;i<=4;i++){
+		for(int j=1;j<=i;j++)
+			{
+				System.out.print(num+" ");
+				num++;
+			}
+			System.out.println();
+}}}
+===============================================================
+6)
+1 
+2 2 
+3 3 3 
+4 4 4 4
+public class Practice {
+		
+	public static void main(String[] args) {
+		//int num=1;
+	for(int i=1;i<=4;i++){
+			for(int j=1;j<=i;j++)
+			{
+				System.out.print(i+" ");
+				//num++;
+			}
+			System.out.println();
+}}}
+===============================================================
+7)Write a java program to find factors of number from 1 to 100
+public class Practice {
+	public static void main(String[] args) {
+		
+		
+		for(int i=1;i<=100;i++){
+			System.out.println("factors of number "+i+":" );
+		
+			for(int j=1;j<=i;j++){
+			
+			if(i%j==0)
+			{
+				System.out.println(""+j);
+			
+}}}}}
+===============================================================
+8)write a java program to find second largest element in the array in the java
+A)    public class Practice {
+	public static void main(String[] args) {
+		
+		int [] a={2,36,4,78,3,90,89,6};
+		Arrays.sort(a); //sort in ascending order
+		System.out.println(a[a.length-2]);  //2nd highest value
+}}
+===============================================================
+9)Write a java program to find missing number in array in java
+A) public class Practice {
+	
+	public static void main(String[] args) {
+		
+		int []  a = {1,2,3,4,5,6,8,9,10};
+		
+		int missingnumber= getmissingnumber(a,10);
+		System.out.printf("mising number in array %s is %d \n ",Arrays.toString(a),missingnumber);
+		
+		//%s - Take the next argument and print it as a string
+		//%d - Take the next argument and print it as an int
+		//\n at the end of the string is for a newline/carriage-return character.
+		
+	}
+	private static int getmissingnumber(int[] a, int n) {
+	                int actualsum =0;
+		int expectedsum =(n*(n+1)/2);
+		for (int i : a) {
+			actualsum =actualsum+i;
+		}
+		return expectedsum-actualsum;
+}}
+===============================================================
+10)multiplication table
+a)public class Practice {
+	
+	public static void main(String[] args) {
+	
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter the value");
+		int n = sc.nextInt();
+		
+		for(int i=0;i<=10;i++){
+			
+			System.out.println(n+" * "+i+" = "+n*i);
+			}}}
+================================================================
+11)prime number are not
+a)	public class Practice {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter the number");
+		int num =sc.nextInt();
+		
+		boolean prime = true;
+		for(int i=2;i<num;i++){
+			if(num%2==0){
+			       prime  = false;
+			}}
+		if(prime == true){
+			System.out.println("prime number");
+			}
+			else{
+				System.out.println("not prime number");
+			}
+	}} 
+==============================================================
+12)swap the numbers
+a)	public class Practice {
+	public static void main(String[] args) {
+		
+		int x= 10;
+		int y =25;
+		System.out.println("before swapping x= "+x+" ; y= "+y);
+		swap(x,y);
+	}
+	public static void swap(int x, int y) {
+		x=x+y; //x=x*y
+		y=x-y; //y=x/y
+		x=x-y; //x=x/y
+		System.out.println("before swapping x= "+x+" ; y= "+y);
+	}}
+===============================================================
+13)anagram
+a)	public class Practice {
+	public static void main(String[] args) {
+		
+		String s1 = "amma";
+		String s2 = "mama";
+		
+		System.out.println("Both strings are anagram :" +anagram(s1,s2));
+	}
+	public static boolean anagram(String s1,String s2){
+		
+		char[] c1 = s1.toCharArray();
+		char[] c2 = s2.toCharArray();
+		
+		Arrays.sort(c1);
+		Arrays.sort(c2);
+		
+		return Arrays.equals(c1, c2);
+	} }
+
+	   ************OR************
+           public class Practice {
+	public static void main(String[] args) {
+		
+		String s1 = "amma";
+		String s2 = "mamaa";
+			
+		char[] c1 = s1.toCharArray();
+		char[] c2 = s2.toCharArray();
+		
+		Arrays.sort(c1);
+		Arrays.sort(c2);
+
+		String sorted1 = new String(c1);
+		String sorted2 = new String (c2);
+
+	  if(sorted1.equals(sorted2))	{
+		System.out.println("anagram");
+		}
+		else{
+			System.out.println("not anagram" );
+		}
+================================================================
+14)swap elements in list in java
+a)
+public class Practice {
+	public static void main(String[] args) {
+		
+		ArrayList<Object> list = new ArrayList<Object>();
+		list.add(1);
+		list.add(4);
+		list.add("string");
+		list.add(true);
+		list.add('b');
+		
+		System.out.println("before swapping :"+list);
+		Collections.swap(list,3 ,1 );
+		System.out.println("after swapping : "+list);
+} }
+
+output:     before swapping :[1, 4, string, true, b]
+	after swapping : [1, true, string, 4, b]
+===============================================================
+15)How to remove the duplicates From String in java?
+A)  public class Practice {
+	public static void main(String[] args) {
+		
+		String s = "vivekkore";
+		System.out.println(removeduplicates(s));		
+	}
+	public static String removeduplicates(String s){
+		HashSet<Character> set = new HashSet<>();
+		StringBuffer sf =new StringBuffer();
+		
+		for(int i=0;i<s.length();i++){
+                                        Character c =s.charAt(i);  //str.charAt(0) --> v
+		if(!set.contains(c)){ 	              //if v not present in set
+		set.add(c);		              //add v to set
+		sf.append(c);		// v
+	} }
+		return sf.toString();		
+}   }
+				
+		***********OR***********
+	public class practice{
+	public static void main(String[] args) {
+		
+		String s="vivekkore";
+		Set<Character> set=new LinkedHashSet<Character>();
+		for(char c:s.toCharArray())
+		{
+		    set.add(Character.valueOf(c));
+		}
+		System.out.println(set);
+		}
+	}
+=================================================================
+16)Write a java program to print duplicates from String in java
+A)	public class practice{
+	
+	public static void main(String[] args) {
+		
+		String s="vivekkore";
+		
+		Map<Character,Integer> map = new HashMap<>();
+		for (int i = 0; i < s.length(); i++) {
+		  char c = s.charAt(i);		//s.charAt(0) -->v
+		  if (map.containsKey(c)) {  	//
+		    int cnt = map.get(c);	//
+		    map.put(c, cnt++);		//
+		  } else {
+		    map.put(c, 1);		//
+		  }
+		}
+		System.out.println(map);
+}    }
+ans: {r=1, e=1, v=1, i=1, k=1, o=1}
+===============================================================
+17)Write a java program to check string is palindrome or not?
+A)	public class practice{
+	public static void main(String[] args) {
+		 String reverse="";
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("enter the values ");
+		String original = scan.nextLine();
+		
+		for(int i=original.length()-1;i>=0;i--){
+		 reverse =  reverse+original.charAt(i);
+		}
+		if(original.equals(reverse)){
+			System.out.println("palindrome");
+		}
+		else{
+			System.out.println("not palindrome");
+		}
+	}	
+}
+================================================================
+18)How to reverse the order of elements in arraylist in java
+A)	public class practice{
+	
+	public static void main(String[] args) {
+		
+		List<String> list = new LinkedList<>();  //integer,
+		list.add("java");
+		list.add("hai");
+		list.add("bye");
+		list.add("phone");
+		list.add("Selenium");
+		
+		System.out.println(list);
+		Collections.reverse(list);   // reverse the list
+		System.out.println(list);
+	
+}  }
+ans: [java, hai, bye, phone, Selenium]
+       [Selenium, phone, bye, hai, java]
+================================================================
+19) Duplicate from array
+A) public class MyDuplicateEntry {
+	 
+    public static void main(String a[]){
+        String[] Arr = {"one","two","three","four","four","five","one"};
+        Set nonduplicate = new HashSet<>();
+        Set duplicate = new HashSet<>();
+        
+        for(String string : Arr)
+        {
+        	if(!nonduplicate.contains(string))
+        	{
+        		nonduplicate.add(string);
+        	}else{
+        		duplicate.add(string);
+        	}
+        }
+        	System.out.println("duplicate values are: "+duplicate); // +nonduplicate
+        
+       }  
+        
+    }
+================================================================
+20) Write a java program to sort characters in String in java?
+a)public class examples {
+	public static void main(String[] args) {
+		
+		String s = "badguy";
+		char [] ch = s.toCharArray();
+		Arrays.sort(ch);
+		System.out.println(ch);
+	}
+} 
+===================================================================
+21)
